@@ -8,7 +8,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        MainController applicationController = new ApplicationController();
+        MainController applicationController = new MainController();
         applicationController.start();
     }
 }
