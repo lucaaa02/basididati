@@ -5,23 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeed8c08-5b22-44fb-a35c-1b74d9157740" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/github_akmo03_SonarCloudUrl_maven_plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_25__1_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/DAO/GenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/DAO/UtenteDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Domain/Utente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/LoginView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/DAO/RicambiCellDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Domain/Ricambi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Domain/TipologiaRicambioCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Domain/TipologiaRicambioComp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/AziendaView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/DAO/Connectivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DAO/Connectivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/CellulareDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Cellulari.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +78,15 @@
       <recent name="Model.DAO" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Applicazione" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="basididati" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -98,7 +99,7 @@
       <workItem from="1707750366123" duration="2874000" />
       <workItem from="1707754909410" duration="3390000" />
       <workItem from="1707758323542" duration="1718000" />
-      <workItem from="1707760049260" duration="921000" />
+      <workItem from="1707760049260" duration="8211000" />
     </task>
     <task id="LOCAL-00001" summary="inizio">
       <option name="closed" value="true" />
@@ -148,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707754711375</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="login">
+      <option name="closed" value="true" />
+      <created>1707761007717</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707761007717</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +166,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inizio" />
     <MESSAGE value="sonar cloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="sonar cloud" />
+    <MESSAGE value="login" />
+    <option name="LAST_COMMIT_MESSAGE" value="login" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/DAO/RicambiCellDAO.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
