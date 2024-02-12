@@ -1,4 +1,5 @@
-package com.example.progetto.dao;
+package Model.DAO;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;

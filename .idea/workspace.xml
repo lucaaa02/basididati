@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeed8c08-5b22-44fb-a35c-1b74d9157740" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/github/workflow/buil.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/DAO/CellulareDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/DAO/Connectivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/Connectivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DAO/Connectivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5443038",
     "vue.rearranger.settings.migration": "true"
@@ -75,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707676629399</updated>
       <workItem from="1707676630455" duration="1540000" />
-      <workItem from="1707750366123" duration="1312000" />
+      <workItem from="1707750366123" duration="2369000" />
     </task>
     <task id="LOCAL-00001" summary="inizio">
       <option name="closed" value="true" />
@@ -85,7 +83,31 @@
       <option name="project" value="LOCAL" />
       <updated>1707682603104</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="sonar cloud">
+      <option name="closed" value="true" />
+      <created>1707753346991</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707753346991</updated>
+    </task>
+    <task id="LOCAL-00003" summary="sonar cloud">
+      <option name="closed" value="true" />
+      <created>1707753414180</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707753414180</updated>
+    </task>
+    <task id="LOCAL-00004" summary="sonar cloud">
+      <option name="closed" value="true" />
+      <created>1707753614444</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707753614444</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inizio" />
-    <option name="LAST_COMMIT_MESSAGE" value="inizio" />
+    <MESSAGE value="sonar cloud" />
+    <option name="LAST_COMMIT_MESSAGE" value="sonar cloud" />
   </component>
 </project>
