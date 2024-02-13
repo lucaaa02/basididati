@@ -21,6 +21,10 @@ public class Connectivity {
 
     }
 
+    public Connection getConn(){
+        return conn;
+    }
+
 
     //creo un singleton per assicurarmi di avere solo un'istanza di connessione
     public static synchronized Connectivity getSingletonInstance () throws SQLException, IOException {

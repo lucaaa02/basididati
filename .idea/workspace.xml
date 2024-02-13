@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeed8c08-5b22-44fb-a35c-1b74d9157740" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Model/DAO/RicambiCellDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Domain/Ricambi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Domain/TipologiaRicambioCell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Domain/TipologiaRicambioComp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/AziendaView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AgencyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/DAO/RicambiDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/DAO/CellulareDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Cellulari.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/Connectivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DAO/Connectivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/RicambiCellDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Ricambi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/Ricambi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +97,8 @@
       <workItem from="1707750366123" duration="2874000" />
       <workItem from="1707754909410" duration="3390000" />
       <workItem from="1707758323542" duration="1718000" />
-      <workItem from="1707760049260" duration="8211000" />
+      <workItem from="1707760049260" duration="10674000" />
+      <workItem from="1707823280065" duration="7921000" />
     </task>
     <task id="LOCAL-00001" summary="inizio">
       <option name="closed" value="true" />
@@ -157,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707761007717</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="visualizza prodotti cellulare">
+      <option name="closed" value="true" />
+      <created>1707769292065</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707769292065</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,15 +174,16 @@
     <MESSAGE value="inizio" />
     <MESSAGE value="sonar cloud" />
     <MESSAGE value="login" />
-    <option name="LAST_COMMIT_MESSAGE" value="login" />
+    <MESSAGE value="visualizza prodotti cellulare" />
+    <option name="LAST_COMMIT_MESSAGE" value="visualizza prodotti cellulare" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Model/DAO/RicambiCellDAO.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/Model/DAO/RicambiDAO.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
