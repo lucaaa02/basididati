@@ -20,9 +20,7 @@ public class UtenteDAO implements GenericDAO<Utente> {
     public Utente execute(Object... params) throws SQLException {
         Utente user = (Utente) params[0];
         Utente credenziali;
-        CallableStatement cs=null;
-        try {
-            cs = connection.conn.prepareCall("{call GetLogin(?,?)}");
+        try (CallableStatement cs = connection.conn.prepareCall("{call GetLogin(?,?)}")) {
 
             cs.setString(1, user.getUsername());
             cs.registerOutParameter(2, Types.VARCHAR);
@@ -33,15 +31,7 @@ public class UtenteDAO implements GenericDAO<Utente> {
         } catch (SQLException e) {
             throw new SQLException(e.getMessage());
         }
-        finally {
-            // Chiudi l'oggetto CallableStatement nel blocco finally
-            if (cs != null) {
-                try {
-                    cs.close();
-                } catch (SQLException ignored) {
-                }
-            }
-        }
+        // Chiudi l'oggetto CallableStatement nel blocco finally
         return credenziali;
 
     }
