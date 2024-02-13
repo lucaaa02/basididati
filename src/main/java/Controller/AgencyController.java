@@ -6,20 +6,21 @@ import View.AziendaView;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class AgencyController {
     public void start() throws SQLException {
-        while(true){
-            int choice=0;
+        boolean exit=true;
+        while (exit) {
+            int choice;
             try {
                 choice = AziendaView.getChoice();
-            }
-            catch(IOException e){
-                throw new RuntimeException("errore durante lettura dell'operazione"+e);
+            } catch (IOException e) {
+                throw new RuntimeException("errore durante lettura dell'operazione" + e);
             }
             switch (choice) {
+                case 0:
+                    exit=false;
                 case 1:
                     RicambiCellPrint(choice);
                     break;
@@ -39,7 +40,7 @@ public class AgencyController {
 
     }
     private void RicambiCellPrint(int n) throws SQLException {
-        List<Ricambi> ricambi=new ArrayList<>();
+        List<Ricambi> ricambi;
         try {
             RicambiDAO ricambiDAO = new RicambiDAO();
             ricambi=ricambiDAO.execute(n);

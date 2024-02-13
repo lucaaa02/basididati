@@ -20,8 +20,12 @@ public class UtenteDAO implements GenericDAO<Utente> {
     public Utente execute(Object... params) throws SQLException {
         Utente user = (Utente) params[0];
         Utente credenziali;
+        CallableStatement cs;
         try {
-            CallableStatement cs = connection.conn.prepareCall("{call GetLogin(?,?)}");
+            cs = connection.conn.prepareCall("{call GetLogin(?,?)}");
+        } catch (SQLException e) {
+            throw new SQLException(e.getMessage());
+        }
             cs.setString(1, user.getUsername());
             cs.registerOutParameter(2, Types.VARCHAR);
             cs.executeQuery();
@@ -29,9 +33,7 @@ public class UtenteDAO implements GenericDAO<Utente> {
             String username = user.getUsername();
             credenziali = new Utente(username, password);
 
-        } catch (SQLException e) {
-            throw new SQLException(e.getMessage());
-        }
+
         return credenziali;
 
     }

@@ -11,7 +11,13 @@ public class Connectivity {
     private static Connectivity singletonClass =null;
 
     protected Connectivity() throws IOException, SQLException {
-        InputStream input = new FileInputStream("src/main/resources/db.properties");
+        InputStream input;
+        try{
+            input = new FileInputStream("src/main/resources/db.properties");
+        }
+        catch(IOException e){
+            throw new IOException("errore apertura file");
+        }
         Properties properties = new Properties();
         properties.load(input);
         String connectionUrl = properties.getProperty("CONNECTION_URL");
