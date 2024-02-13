@@ -24,27 +24,22 @@ public class RicambiDAO implements GenericDAO<List<Ricambi>> {
         List<Ricambi> ricambi = new ArrayList<>();
         int n = (int) params[0];
         CallableStatement cs=null;
+        try {
         switch (n) {
             case 1:
-                try {
+
                     cs = connection.getConn().prepareCall("{call GetRicambiCell()}");
-                } catch (SQLException e) {
-                    throw new SQLException("errore durante la lettura: " + e.getMessage());
-                }
 
-                break;
-            case 2:
-                try {
-                    cs = connection.getConn().prepareCall("{call GetRicambiCom()}");
-                } catch (SQLException e) {
-                    throw new SQLException("errore durante la lettura: " + e.getMessage());
-                }
 
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + n);
+                    break;
+                    case 2:
+                        cs = connection.getConn().prepareCall("{call GetRicambiCom()}");
+
+                        break;
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + n);
+
         }
-
         assert cs != null;
         boolean status = cs.execute();
                     if (status) {
@@ -55,12 +50,20 @@ public class RicambiDAO implements GenericDAO<List<Ricambi>> {
                         }
 
                     }
-            // Chiudi l'oggetto CallableStatement nel blocco finally
-        try {
-            cs.close();
-        } catch (SQLException e) {
-            throw new SQLException("errore durante chiusura" + e.getMessage()); // o gestione dell'eccezione appropriata
         }
-        return ricambi;}
+        catch (SQLException e) {
+            throw new SQLException("errore durante la lettura: " + e.getMessage());
+        }
+        finally {
+            // Chiudi l'oggetto CallableStatement nel blocco finally
+            if (cs != null) {
+                try {
+                    cs.close();
+                } catch (SQLException e) {
+                    throw new SQLException("errore durante chiusura"+e.getMessage()); // o gestione dell'eccezione appropriata
+                }
+            }
+        }
+                return ricambi;}
     }
 

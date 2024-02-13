@@ -33,13 +33,16 @@ public class UtenteDAO implements GenericDAO<Utente> {
         } catch (SQLException e) {
             throw new SQLException(e.getMessage());
         }
+        finally {
             // Chiudi l'oggetto CallableStatement nel blocco finally
-        try {
-            cs.close();
-        } catch (SQLException e) {
-            throw new SQLException("errore durante chiusura" + e.getMessage()); // o gestione dell'eccezione appropriata
+            if (cs != null) {
+                try {
+                    cs.close();
+                } catch (SQLException e) {
+                   throw new SQLException("errore durante chiusura"+e.getMessage()); // o gestione dell'eccezione appropriata
+                }
+            }
         }
-
         return credenziali;
 
     }
