@@ -59,8 +59,8 @@ public class RicambiDAO implements GenericDAO<List<Ricambi>> {
             if (cs != null) {
                 try {
                     cs.close();
-                } catch (SQLException e) {
-                    throw new SQLException("errore durante chiusura"+e.getMessage()); // o gestione dell'eccezione appropriata
+                } catch (SQLException ignored) {
+
                 }
             }
         }

@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeed8c08-5b22-44fb-a35c-1b74d9157740" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/Connectivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/Connectivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/RicambiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/RicambiDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/UtenteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/UtenteDAO.java" afterDir="false" />
     </list>
@@ -98,7 +96,7 @@
       <workItem from="1707758323542" duration="1718000" />
       <workItem from="1707760049260" duration="10674000" />
       <workItem from="1707823280065" duration="10046000" />
-      <workItem from="1707841178247" duration="1624000" />
+      <workItem from="1707841178247" duration="2025000" />
     </task>
     <task id="LOCAL-00001" summary="inizio">
       <option name="closed" value="true" />
@@ -220,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707841959497</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="sonar cloud">
+      <option name="closed" value="true" />
+      <created>1707842829704</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707842829704</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
