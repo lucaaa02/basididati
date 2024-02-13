@@ -11,19 +11,24 @@ public class Connectivity {
     private static Connectivity singletonClass =null;
 
     protected Connectivity() throws IOException, SQLException {
-        InputStream input;
+        InputStream input=null;
         try{
             input = new FileInputStream("src/main/resources/db.properties");
+            Properties properties = new Properties();
+            properties.load(input);
+            String connectionUrl = properties.getProperty("CONNECTION_URL");
+            String user = properties.getProperty("DB_USER");
+            String pass = properties.getProperty("DB_PASS");
+            conn = DriverManager.getConnection(connectionUrl, user, pass);
         }
         catch(IOException e){
             throw new IOException("errore apertura file");
         }
-        Properties properties = new Properties();
-        properties.load(input);
-        String connectionUrl = properties.getProperty("CONNECTION_URL");
-        String user = properties.getProperty("DB_USER");
-        String pass = properties.getProperty("DB_PASS");
-        conn = DriverManager.getConnection(connectionUrl, user, pass);
+        finally{
+            assert input != null;
+            input.close();
+        }
+
 
     }
 

@@ -29,19 +29,24 @@ public class RicambiDAO implements GenericDAO<List<Ricambi>> {
                 try {
                     cs = connection.getConn().prepareCall("{call GetRicambiCell()}");
                 } catch (SQLException e) {
-                    throw new SQLException("BookingList error: " + e.getMessage());
+                    throw new SQLException("errore durante la lettura: " + e.getMessage());
                 }
+
                 break;
             case 2:
                 try {
                     cs = connection.getConn().prepareCall("{call GetRicambiCom()}");
                 } catch (SQLException e) {
-                    throw new SQLException("BookingList error: " + e.getMessage());
+                    throw new SQLException("errore durante la lettura: " + e.getMessage());
                 }
+
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + n);
         }
 
-                    boolean status = cs.execute();
+        assert cs != null;
+        boolean status = cs.execute();
                     if (status) {
                         ResultSet rs = cs.getResultSet();
                         while (rs.next()) {
@@ -50,6 +55,12 @@ public class RicambiDAO implements GenericDAO<List<Ricambi>> {
                         }
 
                     }
-                return ricambi;}
+            // Chiudi l'oggetto CallableStatement nel blocco finally
+        try {
+            cs.close();
+        } catch (SQLException e) {
+            throw new SQLException("errore durante chiusura" + e.getMessage()); // o gestione dell'eccezione appropriata
+        }
+        return ricambi;}
     }
 
