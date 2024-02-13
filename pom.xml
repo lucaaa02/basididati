@@ -34,8 +34,8 @@
                         <id>default-cli</id>
                         <configuration>
                             <!-- Rimuovi questa riga -->
-                            <!-- <sonarJavaHome>C:/Program Files/Java/jdk-21</sonarJavaHome> -->
-                            <mainClass>src/src.Main</mainClass>
+                            <sonarJavaHome>C:/Program Files/Java/jdk-21</sonarJavaHome>
+                            <mainClass>src.main.java/src.main.java.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <artifactId>sonar-maven-plugin</artifactId>
