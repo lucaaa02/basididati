@@ -35,7 +35,7 @@
                         <configuration>
                             <!-- Rimuovi questa riga -->
                             <!-- <sonarJavaHome>C:/Program Files/Java/jdk-21</sonarJavaHome> -->
-                            <mainClass>Main</mainClass>
+                            <mainClass>src/src.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <artifactId>sonar-maven-plugin</artifactId>
