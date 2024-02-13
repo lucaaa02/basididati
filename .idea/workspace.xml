@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeed8c08-5b22-44fb-a35c-1b74d9157740" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/OrdineDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AgencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/RicambiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/RicambiDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/UtenteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/UtenteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Domain/Ricambi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Domain/Ricambi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/AziendaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/AziendaView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +102,7 @@
       <workItem from="1707758323542" duration="1718000" />
       <workItem from="1707760049260" duration="10674000" />
       <workItem from="1707823280065" duration="10046000" />
-      <workItem from="1707841178247" duration="2025000" />
+      <workItem from="1707841178247" duration="12280000" />
     </task>
     <task id="LOCAL-00001" summary="inizio">
       <option name="closed" value="true" />
@@ -226,7 +232,31 @@
       <option name="project" value="LOCAL" />
       <updated>1707842829704</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="sonar cloud">
+      <option name="closed" value="true" />
+      <created>1707843218548</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707843218548</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1707843385723</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1707843385724</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1707843476729</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707843476729</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,15 +279,21 @@
     <MESSAGE value="visualizza prodotti cellulare" />
     <MESSAGE value="visualizza prodotti cellulare e computer" />
     <MESSAGE value="sonar cloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="sonar cloud" />
+    <MESSAGE value="fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Controller/OrderController.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Model/DAO/RicambiDAO.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="7" />
+          <line>93</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

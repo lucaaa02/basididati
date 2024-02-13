@@ -1,11 +1,13 @@
 package Model.DAO;
 
 import Model.Domain.Ricambi;
+import Model.Domain.Utente;
 
 import java.io.IOException;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +47,7 @@ public class RicambiDAO implements GenericDAO<List<Ricambi>> {
                     if (status) {
                         ResultSet rs = cs.getResultSet();
                         while (rs.next()) {
-                            Ricambi ricambio = new Ricambi(rs.getString(1), rs.getString(2), rs.getInt(3));
+                            Ricambi ricambio = new Ricambi(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));
                             ricambi.add(ricambio);
                         }
 
@@ -64,6 +66,45 @@ public class RicambiDAO implements GenericDAO<List<Ricambi>> {
                 }
             }
         }
-                return ricambi;}
+                return ricambi;
     }
+
+    public boolean CheckProduct(String code) throws SQLException {
+        boolean result;
+        try (CallableStatement cs = connection.conn.prepareCall("{call VerificaEsistenzaProdotto(?,?)}")) {
+
+            cs.setString(1, code);
+            cs.registerOutParameter(2, Types.BINARY);
+            cs.executeQuery();
+            result =(cs.getBoolean(2));
+        } catch (SQLException e) {
+            throw new SQLException(e.getMessage());
+        }
+        return result;
+
+    }
+    public boolean CheckPiva(String primo, String secondo) throws SQLException {
+        int result;
+        try (CallableStatement cs = connection.conn.prepareCall("{call VerificaCompatibilitàPIva(?,?,?)}")) {
+
+            cs.setString(1, primo);
+            cs.setString(2, secondo);
+            cs.registerOutParameter(3, Types.INTEGER);
+            cs.executeQuery();
+            result =cs.getInt(3);
+        } catch (SQLException e) {
+            throw new SQLException(e.getMessage());
+        }
+        if (result==1){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+    }
+
+
+
 

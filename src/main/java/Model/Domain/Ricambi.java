@@ -16,11 +16,12 @@ public class Ricambi {
         this.partitaIva=partitaIva;
         this.tipo=tipo;
     }
-    public Ricambi(String tipo,String descrizione,int disponibilita){
+    public Ricambi(String tipo,String descrizione,int disponibilita, String codice, String piva){
         this.tipo=tipo;
         this.disponibilita=disponibilita;
         this.descrizione=descrizione;
-
+        this.codice=codice;
+        this.partitaIva=piva;
 
     }
 

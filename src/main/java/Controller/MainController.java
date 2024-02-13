@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class MainController {
-    public void start() throws SQLException {
+    public void start() throws SQLException, IOException {
         if(LoginController.login()){
             System.out.println("accesso effettuato");
             AgencyController pagina =new AgencyController();

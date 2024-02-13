@@ -1,11 +1,13 @@
 package View;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class AziendaView {
     public static int getChoice() throws IOException {
-        int choice=0;
+        int choice;
         System.out.println("Benvenuto nel sistema interno di FixIT");
         System.out.println("/*************************************/");
         System.out.println("Selezionare un numero per procedere con le operazioni");
@@ -24,5 +26,12 @@ public class AziendaView {
 
 
         return choice;
+    }
+
+    public static String getProduct() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Inserire il codice di prodotto che si vuole inserire(i prodotti che si desidera ordinare devono essere distribuiti dalla stessa azienda)=>");
+        String code = reader.readLine();
+        return code;
     }
 }
