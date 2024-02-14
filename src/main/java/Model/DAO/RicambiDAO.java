@@ -1,7 +1,6 @@
 package Model.DAO;
 
 import Model.Domain.Ricambi;
-import Model.Domain.Utente;
 
 import java.io.IOException;
 import java.sql.CallableStatement;
@@ -90,7 +89,7 @@ public class RicambiDAO implements GenericDAO<List<Ricambi>> {
             cs.setString(1, primo);
             cs.setString(2, secondo);
             cs.registerOutParameter(3, Types.INTEGER);
-            cs.executeQuery();
+            cs.execute();
             result =cs.getInt(3);
         } catch (SQLException e) {
             throw new SQLException(e.getMessage());

@@ -1,6 +1,8 @@
 package Controller;
 
+import Model.DAO.OrdineDAO;
 import Model.DAO.RicambiDAO;
+import Model.Domain.Ordine;
 import View.AziendaView;
 
 import java.io.IOException;
@@ -15,6 +17,8 @@ public class OrderController {
     public void OrderProduct() throws IOException, SQLException {
         String code;
         List<String> codici=new ArrayList<>();
+        List<Integer> numeri=new ArrayList<>();
+        List<Ordine> ordini=new ArrayList<>();
         Scanner input = new Scanner(System.in);
             System.out.print("Quanti tipi di prodotti si desidera acqusitare? ");
             int n = input.nextInt();
@@ -23,8 +27,9 @@ public class OrderController {
         RicambiDAO ricambiDAO=new RicambiDAO();
         if(!ricambiDAO.CheckProduct(code)){
                 System.out.println("il prodotto non esiste");
-                AgencyController ag=new AgencyController();
-                ag.start();
+                System.out.println("inserire un prodotto valido");
+                i--;
+                continue;
             }
         if (i>0){
             if(!ricambiDAO.CheckPiva(code, codici.get(i-1))){
@@ -33,9 +38,21 @@ public class OrderController {
                 ag.start();
             }
         }
+            System.out.print("Quanti oggetti di questo tipo si desidera acqusitare? ");
+            int m = input.nextInt();
+
         codici.add(code);
+        numeri.add(m);
+        ordini.add(new Ordine(code,m));
 
         }
+
+        OrdineDAO ordineDao=new OrdineDAO();
+        ordineDao.ordination(ordini);
+        System.out.println("ordine eseguito");
+        AgencyController ag=new AgencyController();
+        ag.start();
+
 
 
 
