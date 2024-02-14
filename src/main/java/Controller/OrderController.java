@@ -19,12 +19,20 @@ public class OrderController {
         List<String> codici=new ArrayList<>();
         List<Integer> numeri=new ArrayList<>();
         List<Ordine> ordini=new ArrayList<>();
+        RicambiDAO ricambiDAO;
         Scanner input = new Scanner(System.in);
             System.out.print("Quanti tipi di prodotti si desidera acqusitare? ");
             int n = input.nextInt();
+        try{
+            ricambiDAO=new RicambiDAO();
+        }
+        catch(SQLException e){
+            throw new SQLException("errore connessione"+e.getMessage());
+        }
         for (int i=0;i<n;i++){
         code= AziendaView.getProduct();
-        RicambiDAO ricambiDAO=new RicambiDAO();
+
+
         if(!ricambiDAO.CheckProduct(code)){
                 System.out.println("il prodotto non esiste");
                 System.out.println("inserire un prodotto valido");
@@ -46,19 +54,31 @@ public class OrderController {
         ordini.add(new Ordine(code,m));
 
         }
-
-        OrdineDAO ordineDao=new OrdineDAO();
+        OrdineDAO ordineDao;
+      try{
+          ordineDao=new OrdineDAO();
+      }
+      catch(SQLException e){
+          throw new SQLException("errore connessione"+e.getMessage());
+      }
         ordineDao.ordination(ordini);
         System.out.println("ordine eseguito");
         AgencyController ag=new AgencyController();
         ag.start();
 
-
-
-
-
     }
 
-
+    public List <Ordine> GetOrder() throws SQLException {
+        List<Ordine> ordini=new ArrayList<>();
+        OrdineDAO ordineDao;
+        try{
+            ordineDao=new OrdineDAO();
+        }
+        catch(SQLException e){
+            throw new SQLException("errore connessione"+e.getMessage());
+        }
+        ordini=ordineDao.execute();
+        return ordini;
+    }
 
 }

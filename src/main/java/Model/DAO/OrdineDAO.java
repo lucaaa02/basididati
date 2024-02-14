@@ -1,13 +1,13 @@
 package Model.DAO;
 
 import Model.Domain.Ordine;
-import Model.Domain.Ricambi;
-import Model.Domain.Utente;
 
 import java.io.IOException;
 import java.sql.CallableStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrdineDAO implements GenericDAO<List<Ordine>> {
@@ -22,7 +22,35 @@ public class OrdineDAO implements GenericDAO<List<Ordine>> {
     }
     @Override
     public List<Ordine> execute(Object... params) throws SQLException{
-        return null;
+        CallableStatement cs=null;
+        List<Ordine> ordini=new ArrayList<>();
+        try {
+            cs = connection.getConn().prepareCall("{call GetOrder()}");
+            assert cs != null;
+            boolean status = cs.execute();
+            if (status) {
+                ResultSet rs = cs.getResultSet();
+                while (rs.next()) {
+                    Ordine ordine = new Ordine(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getInt(4));
+                    ordini.add(ordine);
+                }
+
+            }
+        }
+        catch (SQLException e) {
+        throw new SQLException("errore durante la lettura: " + e.getMessage());
+    }
+        finally {
+        // Chiudi l'oggetto CallableStatement nel blocco finally
+        if (cs != null) {
+            try {
+                cs.close();
+            } catch (SQLException ignored) {
+
+            }
+        }
+    }
+                return ordini;
     }
 
     public void ordination(List <Ordine> ordine) throws SQLException {
@@ -36,7 +64,7 @@ public class OrdineDAO implements GenericDAO<List<Ordine>> {
         }
         for (int i=0;i<ordine.size();i++) {
             try (CallableStatement cs = connection.conn.prepareCall("{call CompletaOrdine(?,?,?)}")) {
-                cs.setString(1, ordine.get(i).getCodici());
+                cs.setString(1, ordine.get(i).getCodice_p());
                 cs.setInt(2, ordine.get(i).getQuantita());
                 cs.setInt(3, n);
                 cs.executeQuery();

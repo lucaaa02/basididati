@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.DAO.RicambiDAO;
+import Model.Domain.Ordine;
 import Model.Domain.Ricambi;
 import View.AziendaView;
 
@@ -31,6 +32,9 @@ public class AgencyController {
                     OrderController order=new OrderController();
                     order.OrderProduct();
                     break;
+                case 4:
+                    OrderController ordine=new OrderController();
+                    OrdiniPrint();
                 default:
                     System.out.println("Opzione non valida");
                     break;
@@ -73,6 +77,28 @@ public class AgencyController {
         }
 
     }
+private void OrdiniPrint() throws SQLException {
+        OrderController order = new OrderController();
+        List<Ordine> ordini;
+        ordini=order.GetOrder();
+    System.out.println("Numero ordine | Codice Prodotto| Tipo         |Quantità ordinata");
+    System.out.println("-----------------------------------------------------------------------------------------------------");
 
+// Determina la larghezza massima per ogni colonna
+    int maxWidthOrdine = 13;
+    int maxWidthProdotto = 13;
+    int maxWidthTipo = 12;
+    int maxWidthQuantita = 20;
+    for (Ordine ordi : ordini) {
+        // Costruisci la stringa formattata per ogni riga
+        String formattedRow = String.format(" %-"+ maxWidthOrdine+"s | %-"+ maxWidthProdotto +"s | %-"+ maxWidthTipo +"s | %-" +maxWidthQuantita+"s",
+        ordi.getCodice_o(),
+        ordi.getCodice_p(),
+        ordi.getTipo(),
+        ordi.getQuantita());
+        // Stampare la riga formattata
+        System.out.println(formattedRow);
+    }
+}
 
 }

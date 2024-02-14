@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeed8c08-5b22-44fb-a35c-1b74d9157740" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Domain/Ordine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AgencyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/OrdineDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/OrdineDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/RicambiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/RicambiDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Domain/Ordine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Domain/Ordine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/AziendaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/AziendaView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +103,7 @@
       <workItem from="1707823280065" duration="10046000" />
       <workItem from="1707841178247" duration="13306000" />
       <workItem from="1707904419682" duration="5160000" />
+      <workItem from="1707925455350" duration="4838000" />
     </task>
     <task id="LOCAL-00001" summary="inizio">
       <option name="closed" value="true" />
@@ -293,7 +296,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Model/DAO/OrdineDAO.java</url>
-          <line>37</line>
+          <line>65</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>

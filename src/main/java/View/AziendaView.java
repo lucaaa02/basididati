@@ -13,12 +13,12 @@ public class AziendaView {
         System.out.println("Selezionare un numero per procedere con le operazioni");
         System.out.println("1-Controllare giacenza ricambi per cellulari");
         System.out.println("2-Controllare giacenza ricambi per computer");
-        System.out.println("3-uscire dal programma");
+        System.out.println("3-Ordinare ricambi");
+        System.out.println("4-Confermare ordini arrivati");
         Scanner input = new Scanner(System.in);
         while (true) {
-            System.out.print("Please enter your choice: ");
             choice = input.nextInt();
-            if (choice >= 1 && choice <= 3) {
+            if (choice >= 1 && choice <= 4) {
                 break;
             }
             System.out.println("numero non valido");
