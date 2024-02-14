@@ -34,7 +34,7 @@ public class AgencyController {
                     break;
                 case 4:
                     OrderController ordine=new OrderController();
-                    OrdiniPrint();
+                    OrdiniPrint();//bisogna rendere possibile la selezione dell'ordine che è arrivato per aumentare la giacenza delle risorse ordinate
                 default:
                     System.out.println("Opzione non valida");
                     break;
