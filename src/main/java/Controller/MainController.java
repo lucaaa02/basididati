@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class MainController {
     public void start() throws SQLException, IOException {
         if(LoginController.login()){
-            System.out.println("accesso effettuato");
+            System.out.println("accesso effettuato come" );
             AgencyController pagina =new AgencyController();
             pagina.start();
         }

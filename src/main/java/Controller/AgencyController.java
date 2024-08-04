@@ -82,7 +82,7 @@ private void OrdiniPrint() throws SQLException {
         List<Ordine> ordini;
         ordini=order.GetOrder();
     System.out.println("Numero ordine | Codice Prodotto| Tipo         |Quantità ordinata");
-    System.out.println("-----------------------------------------------------------------------------------------------------");
+    System.out.println("------------------------------------------------------------------");
 
 // Determina la larghezza massima per ogni colonna
     int maxWidthOrdine = 13;

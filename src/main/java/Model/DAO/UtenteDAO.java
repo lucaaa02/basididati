@@ -26,8 +26,9 @@ public class UtenteDAO implements GenericDAO<Utente> {
             cs.registerOutParameter(2, Types.VARCHAR);
             cs.executeQuery();
             String password = cs.getString(2);
+            int role = cs.getInt(3);
             String username = user.getUsername();
-            credenziali = new Utente(username, password);
+            credenziali = new Utente(username, password,role);
         } catch (SQLException e) {
             throw new SQLException(e.getMessage());
         }

@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeed8c08-5b22-44fb-a35c-1b74d9157740" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AgencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/UtenteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DAO/UtenteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Domain/TipologiaRicambioCell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Domain/TipologiaRicambioComp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Domain/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Domain/Utente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +105,12 @@
       <workItem from="1707841178247" duration="13306000" />
       <workItem from="1707904419682" duration="5160000" />
       <workItem from="1707925455350" duration="5634000" />
+      <workItem from="1707944564679" duration="130000" />
+      <workItem from="1707944854487" duration="313000" />
+      <workItem from="1707949470883" duration="20000" />
+      <workItem from="1708002260143" duration="2570000" />
+      <workItem from="1708022561666" duration="622000" />
+      <workItem from="1722804879972" duration="2541000" />
     </task>
     <task id="LOCAL-00001" summary="inizio">
       <option name="closed" value="true" />
@@ -267,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707935381699</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="speriamo di finirlo prima o poi">
+      <option name="closed" value="true" />
+      <created>1707944680718</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1707944680718</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +313,8 @@
     <MESSAGE value="sonar cloud" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="aggiunta visualizzazioni ordini" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunta visualizzazioni ordini" />
+    <MESSAGE value="speriamo di finirlo prima o poi" />
+    <option name="LAST_COMMIT_MESSAGE" value="speriamo di finirlo prima o poi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
