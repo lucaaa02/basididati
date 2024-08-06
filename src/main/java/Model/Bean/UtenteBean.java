@@ -1,15 +1,16 @@
-package Model.Domain;
+package Model.Bean;
 
-public class Utente {
-
+public class UtenteBean {
     private final String username;
     private final String password;
-    private int role;
-    public Utente(String user, String pass){
-        username=user;
-        password=pass;
+    public int role;
+
+    public UtenteBean(String user, String pass) {
+        username = user;
+        password = pass;
     }
-    public Utente(String user, String pass, int rol){
+
+    public UtenteBean(String user, String pass, int rol) {
         username = user;
         password = pass;
         role = rol;
@@ -22,16 +23,16 @@ public class Utente {
     public String getUsername() {
         return username;
     }
+
     public String getRole() {
-        if(role==1){
+        if (role == 1) {
             return "segreteria";
-        }
-        else{
+        } else {
             return "magazzino";
         }
     }
+
     public int getNumber() {
         return role;
     }
-
 }

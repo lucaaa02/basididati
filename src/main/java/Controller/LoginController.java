@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Bean.UtenteBean;
 import Model.DAO.UtenteDAO;
 import Model.Domain.Utente;
 import View.LoginView;
@@ -7,8 +8,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginController {
-    public static boolean login() throws SQLException {
-        Utente utente;
+    public static Utente login() throws SQLException {
+        UtenteBean utente;
         try{
             utente = LoginView.getCredential();
         }
@@ -19,10 +20,10 @@ public class LoginController {
         try {
             UtenteDAO utenteDAO = new UtenteDAO();
             user = utenteDAO.execute(utente);
-            if (user.getPassword()==null){
+            if (user.getPassword()==null||!user.getPassword().equals(utente.getPassword())){
                 throw new RuntimeException("credenziali errate");
             }
-            return user.getPassword().equals(utente.getPassword());
+            return user;
         }
         catch(SQLException e ){
             throw new SQLException(e.getMessage());

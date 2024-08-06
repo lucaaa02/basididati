@@ -1,19 +1,34 @@
 package Controller;
 
 import Model.DAO.Connectivity;
+import Model.Domain.Utente;
+import View.MagazzinoView;
+import View.SegreteriaView;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class MainController {
+    Utente currentUser;
     public void start() throws SQLException, IOException {
-        if(LoginController.login()){
-            System.out.println("accesso effettuato come" );
-            AgencyController pagina =new AgencyController();
-            pagina.start();
+        try {
+            currentUser=LoginController.login();
         }
-        else{
-            System.out.println("accesso non effettuato");
+        catch(RuntimeException e){
+            System.out.println(e.getMessage());
+            this.start();
+        }
+        System.out.println("accesso effettuato come "+ currentUser.getRole());
+        int n=currentUser.getNumber();
+        switch(n){
+            case 1:
+                SegreteriaView spagina=new SegreteriaView();
+                spagina.getChoice();
+            case 2:
+                MagazzinoController magazzinoController= new MagazzinoController();
+                magazzinoController.start();
+
+
         }
 
         try{
