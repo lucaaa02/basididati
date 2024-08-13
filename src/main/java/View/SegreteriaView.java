@@ -9,10 +9,9 @@ public class SegreteriaView {
         System.out.println("Benvenuto nel sistema interno di FixIT");
         System.out.println("/*************************************/");
         System.out.println("Selezionare un numero per procedere con le operazioni");
-        System.out.println("1-Controllare giacenza ricambi per cellulari");
-        System.out.println("2-Controllare giacenza ricambi per computer");
-        System.out.println("3-Ordinare ricambi");
-        System.out.println("4-Confermare ordini arrivati");
+        System.out.println("1-Inserire nuovo intervento");
+        System.out.println("2-Visualizzare interventi");
+        System.out.println("3-Confermare pagamento intervento");
         Scanner input = new Scanner(System.in);
         while (true) {
             choice = input.nextInt();

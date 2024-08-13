@@ -2,7 +2,6 @@ package Controller;
 
 import Model.DAO.Connectivity;
 import Model.Domain.Utente;
-import View.MagazzinoView;
 import View.SegreteriaView;
 
 import java.io.IOException;

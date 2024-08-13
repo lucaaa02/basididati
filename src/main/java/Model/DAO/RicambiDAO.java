@@ -1,6 +1,8 @@
 package Model.DAO;
 
+import Model.Domain.CompCom;
 import Model.Domain.CompTel;
+import Model.Domain.Fornitura;
 import Model.Domain.Ricambi;
 
 import java.io.IOException;
@@ -20,19 +22,25 @@ public class RicambiDAO {
             throw new RuntimeException("errore durante la connessione al db "+e.getMessage());
         }
     }
-    public List<Ricambi> getProduct(int n) throws SQLException {
-        String tipo=CompTel.getDescriptionByCode(n);
+    public List<Ricambi> getProduct(int n, int choice) throws SQLException {
+        String tipo = null;
         List<Ricambi> allRicambi = new ArrayList<>();
-        try (CallableStatement cs = connection.conn.prepareCall("{call GetCompT(?)}")) {
+        tipo = switch (choice) {
+            case 1 -> CompTel.getDescriptionByCode(n);
+            case 0 -> CompCom.getDescriptionByCode(n);
+            default -> tipo;
+        };
+        try (CallableStatement cs = connection.conn.prepareCall("{call GetComp(?,?)}")) {
             cs.setString(1, tipo);
+            cs.setInt(2, choice);
             boolean status=cs.execute();
             if(status){
                 ResultSet rs=cs.getResultSet();
                 while(rs.next()){
                     int quantita=rs.getInt(1);
                     String codice=rs.getString(2);
-                    Ricambi ricambio=new Ricambi(codice,tipo,quantita);
-                    allRicambi.add(ricambio);
+                    Ricambi ricambi=new Ricambi(codice,tipo,quantita);
+                    allRicambi.add(ricambi);
                 }
             }
         }
@@ -40,6 +48,8 @@ public class RicambiDAO {
             throw new SQLException("errore durante la lettura: " + e.getMessage());
         }
         return allRicambi;
+
+
 
     }
 }

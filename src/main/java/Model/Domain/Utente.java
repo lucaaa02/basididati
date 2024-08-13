@@ -26,8 +26,11 @@ public class Utente {
         if(role==1){
             return "segreteria";
         }
-        else{
+        else if(role==2){
             return "magazzino";
+        }
+        else {
+            return "tecnico";
         }
     }
     public int getNumber() {
